@@ -11,17 +11,20 @@ def uno_game_greeting():
 
     print()
 
-    print('The standard Uno rules apply, meaning that you can only play the same color card or the same type of card such as the same number or symbol.')
+    print('The standard Uno rules apply, meaning that you can only play the same color card or the same type of card '
+          'such as the same number or symbol.')
 
     print('However, wild cards can be played whenever, regardless of which card is on the top of the discard pile.')
 
     print()
 
-    print('The deck will be shuffled before the game begins and will also be reshuffled in the event that the draw pile runs out of cards.')
+    print('The deck will be shuffled before the game begins and will also be reshuffled in the event that the '
+          'draw pile runs out of cards.')
 
     print()
 
-    print('IMPORTANT NOTE: When playing a card be sure to type it out EXACTLY as it is displayed in your hand. I haven\'t implemented a way to check for different cases in the user input yet.')
+    print('IMPORTANT NOTE: When playing a card be sure to type it out EXACTLY as it is displayed in your hand. I '
+          'haven\'t implemented a way to check for different cases in the user input yet.')
 
     print()
 
@@ -72,7 +75,8 @@ def uno_deck_maker():
 
         yellow_cards.append(x)
 
-    wild_cards = ['Wild_Card', 'Wild_Card', 'Wild_Card', 'Wild_Card', 'Wild_Draw_4', 'Wild_Draw_4', 'Wild_Draw_4', 'Wild_Draw_4']
+    wild_cards = ['Wild_Card', 'Wild_Card', 'Wild_Card', 'Wild_Card', 'Wild_Draw_4', 'Wild_Draw_4', 'Wild_Draw_4',
+                  'Wild_Draw_4']
 
     uno_total_deck = uno_zero_cards + red_cards + blue_cards + green_cards + yellow_cards + wild_cards
 
@@ -91,7 +95,8 @@ def uno_deck_shuffler(deck):
 
             break
 
-        user_shuffle_input = input('Type "0" to pick how many times the deck is shuffled or type "1" to have it randomly shuffled. ')
+        user_shuffle_input = input('Type "0" to pick how many times the deck is shuffled or type "1" to have it '
+                                   'randomly shuffled. ')
 
         print()
 
@@ -405,7 +410,8 @@ def gameplay_function(user_hand, computer_hand, draw_pile):
 
                             print()
 
-                        elif (user_choice[0] == discard_pile[0][0]) or (user_choice[0] == 'W') or (user_choice[-1] == discard_pile[0][-1]):
+                        elif ((user_choice[0] == discard_pile[0][0]) or (user_choice[0] == 'W') or
+                              (user_choice[-1] == discard_pile[0][-1])):
 
                             user_card_chosen = user_choice
 
@@ -431,7 +437,9 @@ def gameplay_function(user_hand, computer_hand, draw_pile):
 
                         user_hand.remove(card)
 
-            uno_action_cards = ['Wild_Card', 'Wild_Draw_4', 'Red_Skip', 'Red_Reverse', 'Red_Draw_2+', 'Blue_Skip', 'Blue_Reverse', 'Blue_Draw_2+', 'Green_Skip', 'Green_Reverse', 'Green_Draw_2+', 'Yellow_Skip', 'Yellow_Reverse', 'Yellow_Draw_2+']
+            uno_action_cards = ['Wild_Card', 'Wild_Draw_4', 'Red_Skip', 'Red_Reverse', 'Red_Draw_2+', 'Blue_Skip',
+                                'Blue_Reverse', 'Blue_Draw_2+', 'Green_Skip', 'Green_Reverse', 'Green_Draw_2+',
+                                'Yellow_Skip', 'Yellow_Reverse', 'Yellow_Draw_2+']
 
             if user_invalid_card:
 
@@ -805,7 +813,9 @@ def gameplay_function(user_hand, computer_hand, draw_pile):
 
                         computer_hand.remove(card)
 
-                uno_action_cards = ['Wild_Card', 'Wild_Draw_4', 'Red_Skip', 'Red_Reverse', 'Red_Draw_2+', 'Blue_Skip', 'Blue_Reverse', 'Blue_Draw_2+', 'Green_Skip', 'Green_Reverse', 'Green_Draw_2+', 'Yellow_Skip', 'Yellow_Reverse', 'Yellow_Draw_2+']
+                uno_action_cards = ['Wild_Card', 'Wild_Draw_4', 'Red_Skip', 'Red_Reverse', 'Red_Draw_2+', 'Blue_Skip',
+                                    'Blue_Reverse', 'Blue_Draw_2+', 'Green_Skip', 'Green_Reverse', 'Green_Draw_2+',
+                                    'Yellow_Skip', 'Yellow_Reverse', 'Yellow_Draw_2+']
 
                 if computer_invalid_card:
 
